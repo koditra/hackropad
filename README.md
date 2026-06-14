@@ -24,6 +24,19 @@ A small 3-key macropad called a hackropad that will help me code faster by typin
 
 ---
 
+## BOM (Bill of Materials)
+
+| Item                                   | Quantity  | Notes                  |
+| -------------------------------------- | --------- | ---------------------- |
+| MODULE-SEEEDUINO-XIAO (Seeeduino XIAO) | 1         | main microcontroller   |
+| SW_Push                                | 3         | input switches         |
+| Keycaps (1U MX-style or compatible)    | 3         | for switches           |
+| USB cable (USB-C)                      | 1         | power + programming    |
+| M3 heat-set inserts                    | 4–6       | optional case mounting |
+| M3 screws                              | 4–6       | case assembly          |
+| 3D printed case parts                  | 1 set     | top + bottom shell     |
+| Wire / solder                          | as needed | switch connections     |
+
 ## Firmware
 
 KMK firmware (CircuitPython)
