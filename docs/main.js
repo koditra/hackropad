@@ -6,7 +6,7 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x0a0a0a);
 
 const camera = new THREE.PerspectiveCamera(
-  70,
+  60,
   window.innerWidth / window.innerHeight,
   0.1,
   1000
@@ -16,21 +16,30 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("viewer").appendChild(renderer.domElement);
 
-scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-
-const light = new THREE.DirectionalLight(0xff6a00, 1);
-light.position.set(5, 5, 5);
+const light = new THREE.AmbientLight(0xffffff, 1);
 scene.add(light);
+
+const directional = new THREE.DirectionalLight(0xff7a18, 1);
+directional.position.set(3, 3, 3);
+scene.add(directional);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
 const loader = new GLTFLoader();
-loader.load("model.glb", (gltf) => {
-  scene.add(gltf.scene);
-});
 
-camera.position.set(0, 1, 5);
+loader.load(
+  "./model.glb",
+  (gltf) => {
+    scene.add(gltf.scene);
+  },
+  undefined,
+  (error) => {
+    console.error("GLB failed to load:", error);
+  }
+);
+
+camera.position.set(0, 1, 4);
 
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
