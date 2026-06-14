@@ -5,7 +5,12 @@ import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x0a0a0a);
 
-const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(
+  70,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -21,7 +26,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
 const loader = new GLTFLoader();
-loader.load("./model.glb", (gltf) => {
+loader.load("model.glb", (gltf) => {
   scene.add(gltf.scene);
 });
 
