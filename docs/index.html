@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -22,19 +24,19 @@
     <h1>HACKROPAD</h1>
     <p>3-key macropad for coding shortcuts</p>
 
-    <a class="github" href="https://github.com/koditra/hackropad" target="_blank">
+    <a class="github" href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank">
       View on GitHub →
     </a>
   </div>
 
-  <div id="viewer"></div>
+  <model-viewer
+    src="model.glb"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1"
+    style="width: 100vw; height: 75vh; background: #0a0a0a;">
+  </model-viewer>
 
-  <div class="footer">
-    Drag to rotate • Scroll to zoom
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>
