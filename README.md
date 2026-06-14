@@ -45,23 +45,6 @@ Firmware/main.py
 
 ---
 
-## Pre-Submission Checklist
-
-* PCB is 100mm × 100mm or smaller (2-layer)
-* Case fits within 200mm × 200mm × 100mm
-* Case is fully 3D printable (no laser-cut or CNC parts)
-* Only kit parts used (or self-sourced extras)
-* Gerbers exported and zipped
-* Case exported as `.STEP`
-* Firmware compiles and included in repo
-* Heatset insert holes are 4.7mm diameter
-* Screw holes have 3.4mm clearance
-* 0.2mm tolerance on mating surfaces
-* USB-C cutout included in case
-* README includes all screenshots + BOM
-
----
-
 ## Notes
 
 This project is designed to be simple to build and focused on improving coding speed with quick macros.
