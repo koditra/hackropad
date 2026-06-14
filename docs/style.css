@@ -14,10 +14,16 @@ body {
 }
 
 .flag img {
-  width: 70px;
+  width: 210px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 0 8px rgba(255, 80, 0, 0.6));
+  transform-origin: top left;
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 80, 0, 0.6));
+}
+
+.flag:hover img {
+  transform: translateY(10px) rotate(-3deg);
 }
 
 .hero {
